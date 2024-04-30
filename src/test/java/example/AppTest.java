@@ -21,7 +21,8 @@ public class AppTest
         
         ChromeOptions options = new ChromeOptions();
         
-        options.addArguments("--headless"); 
+        //options.addArguments("--headless"); 
+        options.addArguments("--remote-debugging-pipe");
 
         WebDriver driver = new ChromeDriver(options);
         
