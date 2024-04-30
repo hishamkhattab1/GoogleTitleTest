@@ -17,7 +17,7 @@ public class AppTest
        
         System.out.println("Testin");
 
-        URL hubUrl = new URL("http://192.168.9.128:4444/wd/hub");
+        URL hubUrl = new URL("http://localhost:4444/wd/hub");
         
         ChromeOptions options = new ChromeOptions();
         
