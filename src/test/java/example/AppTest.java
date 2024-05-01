@@ -26,7 +26,7 @@ public class AppTest
 
         WebDriver driver = new ChromeDriver(options);
         
-        driver = new RemoteWebDriver(new URL("http://192.168.100.44:4444/wd/hub"), options);
+        driver = new RemoteWebDriver(new URL("http://192.168.180.185:4444/wd/hub"), options);
         
         driver.get("http://www.google.com");
 
