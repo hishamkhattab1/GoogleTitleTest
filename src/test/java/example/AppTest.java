@@ -17,7 +17,7 @@ public class AppTest
        
         System.out.println("Testin");
 
-        URL hubUrl = new URL("http://192.168.100.44:4444/wd/hub");
+        //URL hubUrl = new URL("http://192.168.100.44:4444/wd/hub");
         
         ChromeOptions options = new ChromeOptions();
         
@@ -26,7 +26,7 @@ public class AppTest
 
         WebDriver driver = new ChromeDriver(options);
         
-        driver = new RemoteWebDriver(hubUrl, options);
+        driver = new RemoteWebDriver(new URL("http://192.168.100.44:4444/wd/hub"), options);
         
         driver.get("http://www.google.com");
 
