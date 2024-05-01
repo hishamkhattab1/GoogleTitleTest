@@ -4,8 +4,8 @@ import java.net.MalformedURLException;
 
 import org.testng.annotations.Test;
 import java.net.URL;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
+//import org.openqa.selenium.WebDriver;
+//import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
@@ -26,10 +26,10 @@ public class AppTest
         options.addArguments("--remote-debugging-port=9222");
         System.out.println("Adding Chrome Options headless and remote debugging port");
 
-        WebDriver driver = new ChromeDriver(options);
+        //WebDriver driver = new ChromeDriver(options);
         System.out.println("New web driver ");
 
-        driver = new RemoteWebDriver(new URL("http://192.168.180.185:4444/wd/hub"), options);
+        RemoteWebDriver driver = new RemoteWebDriver(new URL("http://192.168.180.185:4444/wd/hub"), options);
         System.out.println("Assiging the URL and options to the new Driver");
 
         driver.get("http://www.google.com");
