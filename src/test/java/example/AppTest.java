@@ -1,17 +1,32 @@
 package example;
 
+import java.io.IOException;
 import java.net.MalformedURLException;
 
+import org.testng.annotations.AfterSuite;
+import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
 import java.net.URL;
-//import org.openqa.selenium.WebDriver;
-//import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
 
 public class AppTest 
 {
+    @BeforeSuite
+    public void startContainer()
+    {
+        try{
+        ProcessBuilder builder = new ProcessBuilder("docker compose up -d");
+        builder.redirectErrorStream(true);
+        builder.start();
+        } 
+        catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+
     @Test
     public void Testing() throws MalformedURLException{
        
@@ -26,7 +41,6 @@ public class AppTest
         options.addArguments("--remote-debugging-port=9222");
         System.out.println("Adding Chrome Options headless and remote debugging port");
 
-        //WebDriver driver = new ChromeDriver(options);
         System.out.println("New web driver ");
 
         RemoteWebDriver driver = new RemoteWebDriver(new URL("http://192.168.180.185:4444/wd/hub"), options);
@@ -46,6 +60,19 @@ public class AppTest
             System.out.println("Test Failed. Expected title: " + expectedTitle + ", Actual title: " + actualTitle);
         }
         driver.quit();
+    }
+
+    @AfterSuite
+    public void stopContainer()
+    {
+        try{
+        ProcessBuilder builder = new ProcessBuilder("docker compose down -d");
+        builder.redirectErrorStream(true);
+        builder.start();
+        } 
+        catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }
    
