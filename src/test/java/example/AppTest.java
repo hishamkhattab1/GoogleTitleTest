@@ -1,10 +1,10 @@
 package example;
 
-import java.io.IOException;
+//import java.io.IOException;
 import java.net.MalformedURLException;
 
-import org.testng.annotations.AfterSuite;
-import org.testng.annotations.BeforeSuite;
+//import org.testng.annotations.AfterSuite;
+//import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
 import java.net.URL;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -13,7 +13,7 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 
 public class AppTest 
 {
-    @BeforeSuite
+   /*  @BeforeSuite
     public void startContainer()
     {
         try{
@@ -24,7 +24,7 @@ public class AppTest
         catch (IOException e) {
             e.printStackTrace();
         }
-    }
+    } */
 
 
     @Test
@@ -62,7 +62,7 @@ public class AppTest
         driver.quit();
     }
 
-    @AfterSuite
+   /*  @AfterSuite
     public void stopContainer()
     {
         try{
@@ -73,6 +73,6 @@ public class AppTest
         catch (IOException e) {
             e.printStackTrace();
         }
-    }
+    } */
 }
    
