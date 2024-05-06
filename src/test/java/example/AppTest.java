@@ -13,7 +13,7 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 
 public class AppTest 
 {
-   /*  @BeforeSuite
+    /* @BeforeSuite
     public void startContainer()
     {
         try{
@@ -24,7 +24,7 @@ public class AppTest
         catch (IOException e) {
             e.printStackTrace();
         }
-    } */
+    }  */
 
 
     @Test
