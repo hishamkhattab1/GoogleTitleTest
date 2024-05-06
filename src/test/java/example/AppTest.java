@@ -32,7 +32,7 @@ public class AppTest
        
         System.out.println("Starting Test");
 
-        URL hubUrl = new URL("http://192.168.180.185:4444/wd/hub");
+        URL hubUrl = new URL("http://192.168.100.44:4444/wd/hub");
         
         ChromeOptions options = new ChromeOptions();
         System.out.println("Adding Chrome Options");
