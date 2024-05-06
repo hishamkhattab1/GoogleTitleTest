@@ -9,5 +9,5 @@ FILE_PATH="~/docker-compose.yaml" # replace with your file path
 #    scp $SERVER:$FILE_PATH ./docker-compose.yaml
 #    docker compose -f docker-compose.yaml up -d
 #EOF
-scp docker-compose.yaml $SERVER:$FILE_PATH 
-ssh -tt $SERVER 'docker compose -f docker-compose.yaml up -d'
+sudo scp docker-compose.yaml $SERVER:$FILE_PATH 
+sudo ssh -tt $SERVER 'docker compose -f docker-compose.yaml up -d'

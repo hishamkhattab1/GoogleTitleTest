@@ -9,4 +9,4 @@ SERVER="root@192.168.100.44" # replace with your username and hostname
 #    rm ./docker-compose.yaml
 #EOF
 
-ssh -tt $SERVER 'docker compose down'
+sudo ssh -tt $SERVER 'docker compose down'
