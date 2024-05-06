@@ -32,18 +32,18 @@ public class AppTest
        
         System.out.println("Starting Test");
 
-        //URL hubUrl = new URL("http://192.168.100.44:4444/wd/hub");
+        URL hubUrl = new URL("http://192.168.180.185:4444/wd/hub");
         
         ChromeOptions options = new ChromeOptions();
         System.out.println("Adding Chrome Options");
 
         options.addArguments("--headless"); 
-        options.addArguments("--remote-debugging-port=9222");
+        //options.addArguments("--remote-debugging-port=9222");
         System.out.println("Adding Chrome Options headless and remote debugging port");
 
         System.out.println("New web driver ");
 
-        RemoteWebDriver driver = new RemoteWebDriver(new URL("http://192.168.180.185:4444/wd/hub"), options);
+        RemoteWebDriver driver = new RemoteWebDriver(hubUrl, options);
         System.out.println("Assiging the URL and options to the new Driver");
 
         driver.get("http://www.google.com");
